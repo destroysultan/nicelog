@@ -1,0 +1,193 @@
+/* 
+    Document   : nicelog
+    Created on : Mar 22, 2012, 4:34:43 PM
+    Author     : nick
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*Log styling*/
+ul.nicelog-log {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.nicelog-log li {
+    margin:0;
+    margin-bottom: 5px;
+    font-family: courier;
+    background-color: #202020;
+    padding: 3px;
+    border-width: 1px 1px 1px 3px;
+    border-style: solid;
+    border-top-color: dimgray;
+    border-right-color: dimgray;
+    border-bottom-color: dimgray;
+    font-size: .8em;
+}
+li.nicelog-filtered {
+    display: none;
+}
+ul.nicelog-log li .nicelog-timestamp {
+    float: right;
+}
+ul.nicelog-log .nicelog-tag {
+    display: inline-block;
+    margin: 0;
+    margin-left:10px;
+    padding: 0;
+    width: 60%;
+    vertical-align: top;
+}
+ul.nicelog-log .nicelog-tag.nicelog-hefty {
+    cursor: pointer;
+}
+ul.nicelog-log .nicelog-tag.nicelog-hefty:before {
+    color: lightgreen;
+    content:'+ ';
+}
+ul.nicelog-log div.nicelog-extra {
+    margin-top: 10px;
+    font-size: 1.1em;
+    display: none;
+}
+ul.nicelog-log span.nicelog-extra {
+    display: inline-block;
+    margin: 5px;
+}
+
+/*Flag stuff*/
+ul.nicelog-log button.nicelog-flag {
+    border:solid 1px #ccc;
+    background-color: #333;
+    vertical-align: baseline;
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    margin-top: 2px;
+}
+ul.nicelog-log li.nicelog-flag button.nicelog-flag {
+    background-color: yellowgreen;
+    border-color: black;
+}
+ul.nicelog-log.nicelog-mask li {
+    opacity: 0.25;
+}
+ul.nicelog-log.nicelog-mask li.nicelog-flag {
+    opacity: 1;
+}
+
+
+/*Error codes*/
+.nicelog-level-info {
+    background-color: darkorange;
+    border-color: darkorange;
+}
+.nicelog-level-debug {
+    background-color:royalblue;
+    border-color:royalblue;
+}
+.nicelog-level-warning {
+    background-color:crimson;
+    border-color:crimson;
+}
+.nicelog-level-error {
+    background-color:red;
+    border-color:red;
+}
+.nicelog-level-system {
+    background-color:olivedrab;
+    border-color:olivedrab;
+}
+.nicelog-level-flag {
+    background-color:yellowgreen;
+    border-color:yellowgreen;
+}
+
+/*Tools*/
+.nicelog-tools-wrapper {
+    text-align: center;
+    position: relative;
+}
+.nicelog-tools {
+    display: inline-block;
+    background-color: rgba(34,34,34,.5);
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+    border: solid 1px #666;
+    z-index: 10;
+    margin-left:3px;
+    white-space: nowrap;
+    position: absolute;
+    text-align: center;
+    top:0px;
+    margin: 10px;
+}
+.nicelog-tools > div {
+    display: inline-block;
+}
+.nicelog-tools hr {
+    border:solid 1px #666;
+}
+.nicelog-tools button {
+    border-style: solid;
+    border-width: 1px;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: .8em;
+    user-select: none;
+    cursor: pointer;
+}
+button.nicelog-mask {
+    background-color: inherit;
+    color: yellowgreen;
+}
+button.nicelog-mask.active {
+    border-color: yellowgreen;
+    color: white;
+}
+
+/*Log filters*/
+span.nicelog-counter {
+    color: white;
+    display: inline-block;
+    padding: 0 3px;
+    border-radius: 3px;
+    margin-left:5px;
+    background-color: black;
+}
+button.nicelog-inactive {
+    background-color: inherit;
+    color: #ccc;
+}
+
+/*Pre formatting*/
+pre {
+    background-color: black;
+    color: white;
+    padding:10px;
+    border: solid 1px #333;
+    border-radius: 5px;
+    margin:0;
+    overflow: hidden;
+}
+pre .key {
+    color: darksalmon;
+}
+pre .string {
+    color: #fcefa1;
+}
+pre .number {
+    color: darkorange;
+}
+pre .boolean {
+    color: blue;
+}
+pre .null {
+    color: magenta;
+}
+pre.shrink {
+    height: 10px;
+}
